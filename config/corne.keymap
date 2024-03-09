@@ -31,38 +31,38 @@ behaviors {
 
                 Base_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |     |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |     |
+// |     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |     |
+// |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |     |
+//        | ESC | SPC(LOW)  | TAB(BLE)  |   |  ENT(RSE)  | BCK(FUN)  | DEL |
                         bindings = <
                 &none &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &none 
                 &none &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G &kp H &hm LSHFT J &hm LCTRL K &hm LALT L &hm LGUI SEMICOLON &none 
                 &none &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH &none 
-                &kp ESCAPE &lt LOWER SPACE &lt MOUSE TAB &lt FUNCTION RETURN &lt RAISE BACKSPACE &kp DEL 
+                &kp ESCAPE &lt LOWER SPACE &lt BLE TAB &lt FUNCTION RETURN &lt RAISE BACKSPACE &kp DEL 
 
                         >;
                 };
                 Lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |     |hanja| BCK | DEL |HANYN| CAP |   |     | HOME|  UP |PG_UP|     |     |
+// |     | GUI | ALT | CTL | SFT | SPC |   |     | LFT | DWN | RGT |  '  |     |
+// |     |CTL_Z|CTL_X|CTL_C|CTL_V|CTL_Y|   |     | END | IST |PG_DN|     |     |
+//                   |     | TRN |     |   |     |     |     |
                         bindings = <
         &none &kp LANGUAGE_2 &kp BACKSPACE &kp DEL &kp LANGUAGE_1 &kp CAPSLOCK &none &kp HOME &kp UP &kp PG_UP &none &none 
         &none &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &kp LEFT_SHIFT &kp SPACE &none &kp LEFT &kp DOWN &kp RIGHT_ARROW &kp SINGLE_QUOTE &none 
-        &none &kp LC(Z) &kp LC(C) &kp LC(C) &kp LC(V) &kp LC(Y) &none &kp END &trans &kp PG_DN &none 
-        &none &none &trans &none &none &none &none 
+        &none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y) &none &kp END &kp INSERT &kp PG_DN &none &none
+        &none &trans &none &none &none &none 
                         >;
                 };
 
                 Raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |     |  [  |  7  |  8  |  9  |  ]  |   |     | MUT | VL- | VL+ |     |     |
+// |     |  -  |  4  |  5  |  6  |  =  |   | SPC | SFT | CTL | ALT | GUI |     |
+// |     |  `  |  1  |  2  |  3  |  \  |   |     |     |     |     |     |     |
+//                   |  .  |  0  |     |   |     | TRN |     |
                         bindings = <
         &none &kp LEFT_BRACKET &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RIGHT_BRACKET &none &kp K_MUTE2 &kp K_VOLUME_DOWN2 &kp K_VOLUME_UP2 &none &none 
         &none &kp MINUS &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &kp SPACE &kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &none 
@@ -73,6 +73,11 @@ behaviors {
                 };
 
                 Function_layer {
+// -----------------------------------------------------------------------------------------
+// |     | F10 |  F7 |  F8 |  F9 |SC_LK|   |     |     |     |     |     |     |
+// |     | F11 |  F4 |  F5 |  F6 |PRINT|   |     | SFT | CTL | ALT | GUI |     |
+// |     | F12 |  F1 |  F2 |  F3 |PAUSE|   |     |     |     |     |     |     |
+//                   |     |     |     |   | TRN |     |     |
                         bindings = <
         &none &kp F10 &kp F7 &kp F8 &kp F9 &kp SCROLLLOCK &none &none &none &none &none &none 
         &none &kp F11 &kp F4 &kp F5 &kp F6 &kp PRINTSCREEN &none &kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &none 
@@ -81,7 +86,12 @@ behaviors {
                         >;
                 };
 
-                Mouse_layer {
+                BLE_layer {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |   | CLR |     |     |     |     |     |
+// |     |     |     |     |     |     |   | BT1 | BT2 | BT3 | BT4 | BT5 |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+//                   |     |     | TRN |   |     |     |     |
                         bindings = <
         &none &none &none &none &none &none &bt BT_CLR &none &none &none &none &none 
         &none &none &none &none &none &none &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &none 

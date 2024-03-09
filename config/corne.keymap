@@ -12,7 +12,7 @@
 #define LOWER 1
 #define RAISE 2
 #define FUNCTION 3
-#define MOUSE 4
+#define BLE 4
 
 / {
 behaviors {

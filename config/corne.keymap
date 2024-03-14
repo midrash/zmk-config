@@ -63,7 +63,7 @@ behaviors {
 //                   |     | TRN |     |   | ENT | BCK | DEL |
                         bindings = <
 //╭─────┬──────────────┬───────────────────┬──────────────────┬────────────────┬──────────────╮ ╭────────────────┬───────────────┬────────────┬─────────────────┬──────────────────┬─────╮
-    XXX   &kp K_MUTE     &kp K_VOLUME_DOWN   &kp K_VOLUME_UP    &kp LANGUAGE_1   &kp CAPSLOCK     XXX              &kp HOME        &kp UP       &kp PG_UP         XXX                XXX  
+    XXX   &kp C_MUTE     &kp C_VOLUME_DOWN   &kp C_VOLUME_UP    &kp LANGUAGE_1   &kp CAPSLOCK     XXX              &kp HOME        &kp UP       &kp PG_UP         XXX                XXX  
 //├─────┼──────────────┼───────────────────┼──────────────────┼────────────────┼──────────────┤ ├────────────────┼───────────────┼────────────┼─────────────────┼──────────────────┼─────┤
     XXX   &kp LEFT_GUI   &kp LEFT_ALT        &kp LEFT_CONTROL   &kp LEFT_SHIFT   &kp SPACE        &kp LANGUAGE_2   &kp LEFT        &kp DOWN     &kp RIGHT_ARROW   &kp SINGLE_QUOTE   XXX  
 //├─────┼──────────────┼───────────────────┼──────────────────┼────────────────┼──────────────┤ ├────────────────┼───────────────┼────────────┼─────────────────┼──────────────────┼─────┤

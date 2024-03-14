@@ -90,15 +90,15 @@ behaviors {
 
                 MOUSE_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     | CLR |   |     | MSU | M_U | MSD |     |     |
-// |     | BT5 | BT4 | BT3 | BT2 | BT1 |   | MB5 | M_L | M_D | M_R | MB4 |     |
+// |     | BT5 | BT4 | BT3 | BT2 | BT1 |   |     | MSU | M_U | MSD |     |     |
+// |     | GUI | ALT | CTL | SFT |     |   | MB5 | M_L | M_D | M_R | MB4 |     |
 // |     |     |     |     |     |     |   |     | MSL | MB3 | MSR |     |     |
-//                   |     |     | TRN |   | MB1 | MB2 |     |
+//                   | CLR |     | TRN |   | MB1 | MB2 |     |
                         bindings = <
-&none &none &none &none &none &bt BT_CLR &none &msc SCROLL_UP &mmv MOVE_UP &msc SCROLL_DOWN &none &none 
-&none &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &mkp MB5 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB4 &none 
+&none &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &none &msc SCROLL_UP &mmv MOVE_UP &msc SCROLL_DOWN &none &none 
+&none &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &kp LEFT_SHIFT &none &mkp MB5 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB4 &none 
 &none &none &none &none &none &none &none &msc SCROLL_LEFT &mkp MB3 &msc SCROLL_RIGHT &none &none 
-&none &none &trans &mkp MB1 &mkp MB2 &none 
+&bt BT_CLR &none &trans &mkp MB1 &mkp MB2 &none 
                         >;
                 };
         };

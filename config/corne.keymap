@@ -16,16 +16,21 @@
 #define FUNCTION 3
 #define MOUSE 4
 
+#define XXX &none
+#define TRN &trans
+
 / {
 behaviors {
-        hm: homerow_mods {
+        bhm: balanced_homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS";
                 #binding-cells = <2>;
-                tapping-term-ms = <200>;
-                quick_tap_ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
+                flavor = "balanced";
+                tapping-term-ms = <280>;
+                quick-tap-ms = <175>;                // repeat on tap-into-hold
+                require-prior-idle-ms = <150>;
+                bindings = <&kp>, <&kp>;;
+                hold-trigger-on-release;             // delay positional check until key-release
         };
 };
         keymap {
@@ -36,15 +41,20 @@ behaviors {
 // |     |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |     |
 // |     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |     |
 // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |     |
-//        | ESC | SPC(LOW)  | TAB(MUS)  |   |  ENT(FUN)  | BCK(RSE)  | DEL |
+//       | ESC | SPC(LOW)  | TAB(MUS)  |   |  ENT(FUN)  | BCK(RSE)  | DEL |
                         bindings = <
-&none &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &none 
-&none &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G &kp H &hm LSHFT J &hm LCTRL K &hm LALT L &hm LGUI SEMICOLON &none 
-&none &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH &none 
-&kp ESCAPE &lt ARROW SPACE &lt MOUSE TAB &lt FUNCTION RETURN &lt NUMBER BACKSPACE &kp DEL 
-
+//╭─────┬─────────────┬─────────────┬─────────────┬─────────────────┬───────────────╮ ╭─────────────────────┬──────────────────────┬──────────────┬─────────────┬─────────────────────┬─────╮
+    XXX   &kp Q         &kp W         &kp E         &kp R             &kp T             &kp Y                 &kp U                  &kp I          &kp O         &kp P                 XXX  
+//├─────┼─────────────┼─────────────┼─────────────┼─────────────────┼───────────────┤ ├─────────────────────┼──────────────────────┼──────────────┼─────────────┼─────────────────────┼─────┤
+    XXX   &bhm LGUI A   &bhm LALT S   &bhm LCTRL D  &bhm LSHFT F      &kp G             &kp H                 &bhm LSHFT J           &bhm LCTRL K   &bhm LALT L   &bhm LGUI SEMICOLON   XXX 
+//├─────┼─────────────┼─────────────┼─────────────┼─────────────────┼───────────────┤ ├─────────────────────┼──────────────────────┼──────────────┼─────────────┼─────────────────────┼─────┤
+    XXX   &kp Z         &kp X         &kp C         &kp V             &kp B             &kp N                 &kp M                  &kp COMMA      &kp PERIOD    &kp SLASH             XXX   
+//╰─────┴─────────────┴─────────────┼─────────────┼─────────────────┼───────────────┤ ├─────────────────────┼──────────────────────┼──────────────┼─────────────┴─────────────────────┴─────╯ 
+                                      &kp ESCAPE    &lt ARROW SPACE   &lt MOUSE TAB     &lt FUNCTION RETURN   &lt NUMBER BACKSPACE   &kp DEL                                               
+//                                  ╰─────────────┴─────────────────┴───────────────╯ ╰─────────────────────┴──────────────────────┴──────────────╯   
                         >;
                 };
+
                 ARROW_layer {
 // -----------------------------------------------------------------------------------------
 // |     | MUT | VL- | VL+ |HANYN| CAP |   |     | HOME|  UP |PG_UP|     |     |
@@ -52,10 +62,15 @@ behaviors {
 // |     |CTL_Z|CTL_X|CTL_C|CTL_V|CTL_Y|   |     | END | IST |PG_DN|     |     |
 //                   |     | TRN |     |   | ENT | BCK | DEL |
                         bindings = <
-&none &kp K_MUTE2 &kp K_VOLUME_DOWN2 &kp K_VOLUME_UP2 &kp LANGUAGE_1 &kp CAPSLOCK &none &kp HOME &kp UP &kp PG_UP &none &none 
-&none &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &kp LEFT_SHIFT &kp SPACE &none &kp LEFT &kp DOWN &kp RIGHT_ARROW &kp SINGLE_QUOTE &none 
-&none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y) &none &kp END &kp INSERT &kp PG_DN &none &none
-&none &trans &none &kp RETURN &kp BACKSPACE &kp DEL 
+//╭─────┬──────────────┬────────────────────┬──────────────────┬────────────────┬──────────────╮ ╭────────────┬───────────────┬────────────┬─────────────────┬──────────────────┬─────╮
+    XXX   &kp K_MUTE2    &kp K_VOLUME_DOWN2   &kp K_VOLUME_UP2   &kp LANGUAGE_1   &kp CAPSLOCK     XXX          &kp HOME        &kp UP       &kp PG_UP         XXX                XXX  
+//├─────┼──────────────┼────────────────────┼──────────────────┼────────────────┼──────────────┤ ├────────────┼───────────────┼────────────┼─────────────────┼──────────────────┼─────┤
+    XXX   &kp LEFT_GUI   &kp LEFT_ALT         &kp LEFT_CONTROL   &kp LEFT_SHIFT   &kp SPACE        XXX          &kp LEFT        &kp DOWN     &kp RIGHT_ARROW   &kp SINGLE_QUOTE   XXX  
+//├─────┼──────────────┼────────────────────┼──────────────────┼────────────────┼──────────────┤ ├────────────┼───────────────┼────────────┼─────────────────┼──────────────────┼─────┤
+    XXX   &kp LC(Z)      &kp LC(X)            &kp LC(C)          &kp LC(V)        &kp LC(Y)        XXX          &kp END         &kp INSERT   &kp PG_DN         XXX                XXX   
+//╰─────┴──────────────┴────────────────────┼──────────────────┼────────────────┼──────────────┤ ├────────────┼───────────────┼────────────┼─────────────────┴──────────────────┴─────╯ 
+                                              XXX                TRN              XXX              &kp RETURN   &kp BACKSPACE   &kp DEL                                           
+//                                          ╰──────────────────┴────────────────┴──────────────╯ ╰────────────┴───────────────┴────────────╯  
                         >;
                 };
 
@@ -66,10 +81,15 @@ behaviors {
 // |     |  `  |  1  |  2  |  3  |  \  |   |     |     |     |     |     |     |
 //                   |  .  |  0  |     |   |     | TRN |     |
                         bindings = <
-&none &kp LEFT_BRACKET &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RIGHT_BRACKET &none &none &none &none &none &none 
-&none &kp MINUS &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &kp SPACE &kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &none 
-&none &kp GRAVE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp BACKSLASH &none &none &none &none &none &none 
-&kp DOT &kp NUMBER_0 &none &none &trans &none 
+//╭─────┬──────────────────┬──────────────┬──────────────┬──────────────┬───────────────────╮ ╭───────────┬────────────────┬──────────────────┬──────────────┬──────────────┬─────╮
+    XXX   &kp LEFT_BRACKET   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9   &kp RIGHT_BRACKET     XXX         XXX              XXX                XXX            XXX            XXX 
+//├─────┼──────────────────┼──────────────┼──────────────┼──────────────┼───────────────────┤ ├───────────┼────────────────┼──────────────────┼──────────────┼──────────────┼─────┤
+    XXX   &kp MINUS          &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6   &kp EQUAL             &kp SPACE   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp LEFT_ALT   &kp LEFT_GUI   XXX 
+//├─────┼──────────────────┼──────────────┼──────────────┼──────────────┼───────────────────┤ ├───────────┼────────────────┼──────────────────┼──────────────┼──────────────┼─────┤
+    XXX   &kp GRAVE          &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3   &kp BACKSLASH         XXX         XXX              XXX                XXX            XXX            XXX   
+//╰─────┴──────────────────┴──────────────┼──────────────┼──────────────┼───────────────────┤ ├───────────┼────────────────┼──────────────────┼──────────────┴──────────────┴─────╯ 
+                                            &kp DOT        &kp NUMBER_0   XXX                   XXX         TRN              XXX                                            
+//                                        ╰──────────────┴──────────────┴───────────────────╯ ╰───────────┴────────────────┴──────────────────╯ 
 
                         >;
                 };
@@ -81,10 +101,15 @@ behaviors {
 // |     | F12 |  F1 |  F2 |  F3 |PAUSE|   |     |     |     |     |     |     |
 //                   |     |     |     |   | TRN |     |     |
                         bindings = <
-&none &kp F10 &kp F7 &kp F8 &kp F9 &kp SCROLLLOCK &none &none &none &none &none &none 
-&none &kp F11 &kp F4 &kp F5 &kp F6 &kp PRINTSCREEN &none &kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &none 
-&none &kp F12 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK &none &none &none &none &none &none 
-&none &none &none &trans &none &none 
+//╭─────┬─────────┬────────┬────────┬────────┬─────────────────╮ ╭─────┬────────────────┬──────────────────┬──────────────┬──────────────┬───────╮
+    XXX   &kp F10   &kp F7   &kp F8   &kp F9   &kp SCROLLLOCK      XXX   XXX              XXX                XXX            XXX            XXX 
+//├─────┼─────────┼────────┼────────┼────────┼─────────────────┤ ├─────┼────────────────┼──────────────────┼──────────────┼──────────────┼───────┤
+    XXX   &kp F11   &kp F4   &kp F5   &kp F6   &kp PRINTSCREEN     XXX   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp LEFT_ALT   &kp LEFT_GUI   XXX 
+//├─────┼─────────┼────────┼────────┼────────┼─────────────────┤ ├─────┼────────────────┼──────────────────┼──────────────┼──────────────┼───────┤
+    XXX   &kp F12   &kp F1   &kp F2   &kp F3   &kp PAUSE_BREAK     XXX   XXX              XXX                XXX            XXX            XXX   
+//╰─────┴─────────┴────────┼────────┼────────┼─────────────────┤ ├─────┼────────────────┼──────────────────┼──────────────┴──────────────┴───────╯ 
+                             XXX      XXX      XXX                 TRN   XXX              XXX                                         
+//                         ╰────────┴────────┴─────────────────╯ ╰─────┴────────────────┴──────────────────╯ 
                         >;
                 };
 
@@ -95,10 +120,15 @@ behaviors {
 // |     |     |     |     |     |     |   |     | MSL | MB3 | MSR |     |     |
 //                   | CLR |     | TRN |   | MB1 | MB2 |     |
                         bindings = <
-&none &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &none &msc SCROLL_UP &mmv MOVE_UP &msc SCROLL_DOWN &none &none 
-&none &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &kp LEFT_SHIFT &none &mkp MB5 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB4 &none 
-&none &none &none &none &none &none &none &msc SCROLL_LEFT &mkp MB3 &msc SCROLL_RIGHT &none &none 
-&bt BT_CLR &none &trans &mkp MB1 &mkp MB2 &none 
+//╭─────┬──────────────┬──────────────┬──────────────────┬────────────────┬──────────────╮ ╭──────────┬──────────────────┬────────────────┬───────────────────┬──────────┬─────╮
+    XXX   &bt BT_SEL 5   &bt BT_SEL 4   &bt BT_SEL 3       &bt BT_SEL 2     &bt BT_SEL 1     XXX        &msc SCROLL_UP     &mmv MOVE_UP     &msc SCROLL_DOWN    XXX        XXX 
+//├─────┼──────────────┼──────────────┼──────────────────┼────────────────┼──────────────┤ ├──────────┼──────────────────┼────────────────┼───────────────────┼──────────┼─────┤
+    XXX   &kp LEFT_GUI   &kp LEFT_ALT   &kp LEFT_CONTROL   &kp LEFT_SHIFT   XXX              &mkp MB5   &mmv MOVE_LEFT     &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &mkp MB4   XXX 
+//├─────┼──────────────┼──────────────┼──────────────────┼────────────────┼──────────────┤ ├──────────┼──────────────────┼────────────────┼───────────────────┼──────────┼─────┤
+    XXX   XXX            XXX            XXX                XXX              XXX              XXX        &msc SCROLL_LEFT   &mkp MB3         &msc SCROLL_RIGHT   XXX        XXX 
+//╰─────┴──────────────┴──────────────┼──────────────────┼────────────────┼──────────────┤ ├──────────┼──────────────────┼────────────────┼───────────────────┴──────────┴─────╯ 
+                                        &bt BT_CLR         XXX              TRN              &mkp MB1   &mkp MB2           XXX                                      
+//                                    ╰──────────────────┴────────────────┴──────────────╯ ╰──────────┴──────────────────┴────────────────╯ 
                         >;
                 };
         };

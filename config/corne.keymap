@@ -50,7 +50,14 @@ behaviors {
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+        };
 };
         keymap {
                 compatible = "zmk,keymap";
@@ -65,11 +72,11 @@ behaviors {
 //╭─────┬─────────────┬─────────────┬──────────────┬───────────────┬─────────────╮ ╭─────────────┬──────────────┬──────────────┬─────────────┬────────────────┬─────╮
     XXX   &kp Q         &kp W         &kp E          &kp R           &kp T           &kp Y         &kp U          &kp I          &kp O         &kp P            XXX  
 //├─────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤ ├─────────────┼──────────────┼──────────────┼─────────────┼────────────────┼─────┤
-    XXX   &bhm LGUI A   &bhm LALT S   &bhm LCTRL D   &bhm LSHFT F    &kp G           &kp H         &bhm LSHFT J   &bhm LCTRL K   &bhm LALT L   &bhm LGUI SEMI   XXX 
+    XXX   &kp A         &kp S         &kp D          &kp F           &kp G           &kp H         &kp J          &kp K          &kp L         &kp SEMI         XXX 
 //├─────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤ ├─────────────┼──────────────┼──────────────┼─────────────┼────────────────┼─────┤
     XXX   &kp Z         &kp X         &kp C          &kp V           &kp B           &kp N         &kp M          &kp COMMA      &kp PERIOD    &kp SLASH        XXX   
 //╰─────┴─────────────┴─────────────┼──────────────┼───────────────┼─────────────┤ ├─────────────┼──────────────┼──────────────┼─────────────┴────────────────┴─────╯ 
-                                      &lt BLE ESC    &lt NAV SPACE   &lt MUS TAB     &lt SYM RET   &lt NUM BSPC   &lt FUN DEL                                               
+                                      &lt BLE ESC   &bhm LSHFT SPACE  &lt NAV TAB    &lt SYM RET   &lt NUM BSPC   &lt FUN DEL                                               
 //                                  ╰──────────────┴───────────────┴─────────────╯ ╰─────────────┴──────────────┴──────────────╯   
                         >;
                 };
@@ -84,7 +91,7 @@ behaviors {
 //╭─────┬────────────┬──────────────┬──────────────┬───────────┬──────────────╮ ╭───────────┬──────────┬──────────┬───────────┬─────────┬─────╮
     XXX   &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP   &kp LANG1   &kp CAPS         XXX         &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────┼──────────────┤ ├───────────┼──────────┼──────────┼───────────┼─────────┼─────┤
-    XXX   &kp LGUI     &kp LALT       &kp LCTRL      &kp LSHFT   &kp LS(LG(S))    &kp LANG2   &kp LEFT   &kp DOWN   &kp RIGHT   &kp SQT   XXX  
+    XXX   &skq LGUI    &skq LALT      &skq LCTRL     &skq LSHFT  &kp LS(LG(S))    &kp LANG2   &kp LEFT   &kp DOWN   &kp RIGHT   &kp SQT   XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────┼──────────────┤ ├───────────┼──────────┼──────────┼───────────┼─────────┼─────┤
     XXX   &kp LC(Z)    &kp LC(X)      &kp LC(C)      &kp LC(V)   &kp LC(Y)        XXX         &kp END    &kp INS    &kp PG_DN   XXX       XXX   
 //╰─────┴────────────┴──────────────┼──────────────┼───────────┼──────────────┤ ├───────────┼──────────┼──────────┼───────────┴─────────┴─────╯ 
@@ -141,7 +148,7 @@ behaviors {
 //╭─────┬───────────┬────────┬─────────┬────────┬───────────╮ ╭─────┬───────────┬───────────┬──────────┬──────────┬─────╮
     XXX   &kp LBKT    &kp N7   &kp N8    &kp N9   &kp RBKT      XXX   XXX         XXX         XXX        XXX        XXX 
 //├─────┼───────────┼────────┼─────────┼────────┼───────────┤ ├─────┼───────────┼───────────┼──────────┼──────────┼─────┤
-    XXX   &kp MINUS   &kp N4   &kp N5    &kp N6   &kp PLUS      XXX   &kp LSHFT   &kp LCTRL   &kp LALT   &kp LGUI   XXX 
+    XXX   &kp MINUS   &kp N4   &kp N5    &kp N6   &kp PLUS      XXX   &skq LSHFT  &skq LCTRL  &skq LALT  &skq LGUI  XXX 
 //├─────┼───────────┼────────┼─────────┼────────┼───────────┤ ├─────┼───────────┼───────────┼──────────┼──────────┼─────┤
     XXX   &kp GRAVE   &kp N1   &kp N2    &kp N3   &kp SQT       XXX   XXX         &kp COMMA  &kp PERIOD  &kp SLASH  XXX    
 //╰─────┴───────────┴────────┼─────────┼────────┼───────────┤ ├─────┼───────────┼───────────┼──────────┴──────────┴─────╯ 
@@ -179,11 +186,11 @@ behaviors {
 //╭─────┬─────────────┬──────────────┬──────────────┬────────────────┬──────────────╮ ╭──────────────┬───────────────┬──────────────┬─────────────┬─────────────────┬─────╮
     XXX   &kp Q         &kp W          &kp E          &kp R            &kp T            &kp Y          &kp U           &kp I          &kp O         &kp P             XXX  
 //├─────┼─────────────┼──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┼─────────────────┼─────┤
-    XXX   &bhm LCTRL A   &bhm LALT S   &bhm LGUI D    &bhm LSHFT F     &kp G            &kp H          &bhm LSHFT J    &bhm LGUI K    &bhm LALT L   &bhm LCTRL SEMI   XXX 
+    XXX   &kp A         &kp S          &kp D          &kp F            &kp G            &kp H          &kp J           &kp K          &kp L         &kp SEMI          XXX 
 //├─────┼─────────────┼──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┼─────────────────┼─────┤
     XXX   &kp Z         &kp X          &kp C          &kp V            &kp B            &kp N          &kp M           &kp COMMA      &kp PERIOD    &kp SLASH         XXX   
 //╰─────┴─────────────┴──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┴─────────────────┴─────╯ 
-                                       &lt BLE ESC    &lt MNAV SPACE   &lt MMUS TAB     &lt MSYM RET   &lt MNUM BSPC   &lt MFUN DEL                                               
+                                       &lt BLE ESC   &bhm LSHFT SPACE  &lt MNAV TAB     &lt MSYM RET   &lt MNUM BSPC   &lt MFUN DEL                                               
 //                                   ╰──────────────┴────────────────┴──────────────╯ ╰──────────────┴───────────────┴──────────────╯   
                         >;
                 };
@@ -198,7 +205,7 @@ behaviors {
 //╭─────┬────────────┬──────────────┬──────────────┬───────────────┬───────────────╮ ╭────────────┬──────────┬──────────┬───────────┬─────────┬─────╮
     XXX   &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP   &kp LC(SPACE)   &kp CAPS          XXX          &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┼─────────┼─────┤
-    XXX   &kp LCTRL    &kp LALT       &kp LGUI       &kp LSHFT       &kp LS(LG(4))     &kp LA(RET)  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SQT   XXX  
+    XXX   &skq LCTRL   &skq LALT      &skq LGUI      &skq LSHFT      &kp LS(LG(4))     &kp LA(RET)  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SQT   XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┼─────────┼─────┤
     XXX   &kp LG(Z)    &kp LG(X)      &kp LG(C)      &kp LG(V)       &kp LS(LG(Z))     XXX          &kp END    &kp INS    &kp PG_DN   XXX       XXX   
 //╰─────┴────────────┴──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┴─────────┴─────╯ 
@@ -255,7 +262,7 @@ behaviors {
 //╭─────┬───────────┬────────┬─────────┬────────┬───────────╮ ╭─────┬───────────┬──────────┬──────────┬───────────┬─────╮
     XXX   &kp LBKT    &kp N7   &kp N8    &kp N9   &kp RBKT      XXX   XXX         XXX        XXX        XXX         XXX 
 //├─────┼───────────┼────────┼─────────┼────────┼───────────┤ ├─────┼───────────┼──────────┼──────────┼───────────┼─────┤
-    XXX   &kp MINUS   &kp N4   &kp N5    &kp N6   &kp PLUS      XXX   &kp LSHFT   &kp LGUI   &kp LALT   &kp LCTRL   XXX 
+    XXX   &kp MINUS   &kp N4   &kp N5    &kp N6   &kp PLUS      XXX   &skq LSHFT  &skq LGUI  &skq LALT  &skq LCTRL  XXX 
 //├─────┼───────────┼────────┼─────────┼────────┼───────────┤ ├─────┼───────────┼──────────┼──────────┼───────────┼─────┤
     XXX   &kp GRAVE   &kp N1   &kp N2    &kp N3   &kp SQT       XXX   XXX         &kp COMMA &kp PERIOD  &kp SLASH   XXX
 //╰─────┴───────────┴────────┼─────────┼────────┼───────────┤ ├─────┼───────────┼──────────┼──────────┴───────────┴─────╯ 

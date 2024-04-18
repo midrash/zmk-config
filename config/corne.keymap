@@ -203,7 +203,7 @@ behaviors {
 //                   |     | TRN |     |   | RET | BSPC| DEL |
                         bindings = <
 //╭─────┬────────────┬──────────────┬──────────────┬───────────────┬───────────────╮ ╭────────────┬──────────┬──────────┬───────────┬─────────┬─────╮
-    XXX   &kp CAPS    &kp &kp LC(SPACE) &kp C_VOL_DN  &kp C_VOL_UP   &kp C_MUTE        XXX          &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
+    XXX   &kp CAPS     &kp LC(SPACE)  &kp C_VOL_DN   &kp C_VOL_UP    &kp C_MUTE        XXX          &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┼─────────┼─────┤
     XXX   &skq LCTRL   &skq LALT      &skq LGUI      &skq LSHFT      &kp LS(LG(N4))    &kp LA(RET)  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SQT   XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┼─────────┼─────┤

@@ -83,13 +83,13 @@ behaviors {
 
                 NAV_layer {
 // -----------------------------------------------------------------------------------------
-// |     | MUT | VL- | VL+ | 한영 | CAP |   |     | HOME|  UP |PG_UP|     |     |
+// |     | CAP | 한영 | VL- | VL+ | MUT |   |     | HOME|  UP |PG_UP|     |     |
 // |     | GUI | ALT | CTL | SFT |LSLGS|   | 한자 | LEFT| DOWN|RIGHT|  '  |     |
 // |     |CTL_Z|CTL_X|CTL_C|CTL_V|CTL_Y|   |     | END | INS |PG_DN|     |     |
 //                   |     | TRN |     |   | RET | BSPC| DEL |
                         bindings = <
 //╭─────┬────────────┬──────────────┬──────────────┬───────────┬──────────────╮ ╭───────────┬──────────┬──────────┬───────────┬─────────┬─────╮
-    XXX   &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP   &kp LANG1   &kp CAPS         XXX         &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
+    XXX   &kp CAPS     &kp LANG1      &kp C_VOL_DN   &kp C_VOL_UP &kp C_MUTE      XXX         &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────┼──────────────┤ ├───────────┼──────────┼──────────┼───────────┼─────────┼─────┤
     XXX   &skq LGUI    &skq LALT      &skq LCTRL     &skq LSHFT  &kp LS(LG(S))    &kp LANG2   &kp LEFT   &kp DOWN   &kp RIGHT   &kp SQT   XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────┼──────────────┤ ├───────────┼──────────┼──────────┼───────────┼─────────┼─────┤
@@ -197,13 +197,13 @@ behaviors {
 
                 MNAV_layer {
 // -----------------------------------------------------------------------------------------
-// |     | MUT | VL- | VL+ | 한영 | CAP |   |     | HOME|  UP |PG_UP|     |     |
+// |     | CAP | 한영 | VL- | VL+ | MUT |   |     | HOME|  UP |PG_UP|     |     |
 // |     | GUI | ALT | CTL | SFT |LSLGS|   | 한자 | LEFT| DOWN|RIGHT|  '  |     |
 // |     |GUI_Z|GUI_X|GUI_C|GUI_V|LSLG4|   |     | END | INS |PG_DN|     |     |
 //                   |     | TRN |     |   | RET | BSPC| DEL |
                         bindings = <
 //╭─────┬────────────┬──────────────┬──────────────┬───────────────┬───────────────╮ ╭────────────┬──────────┬──────────┬───────────┬─────────┬─────╮
-    XXX   &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP   &kp LC(SPACE)   &kp CAPS          XXX          &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
+    XXX   &kp CAPS     &kp LANG1      &kp C_VOL_DN   &kp C_VOL_UP    &kp C_MUTE        XXX          &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┼─────────┼─────┤
     XXX   &skq LCTRL   &skq LALT      &skq LGUI      &skq LSHFT      &kp LS(LG(N4))    &kp LA(RET)  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SQT   XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┼─────────┼─────┤

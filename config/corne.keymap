@@ -70,11 +70,11 @@ behaviors {
 //       | ESC | SPC(NAV)  | TAB(MUS)  |   |  RET(SYM)  | BCK(NUM)  | DEL(FUN) |
                         bindings = <
 //╭─────┬─────────────┬─────────────┬──────────────┬───────────────┬─────────────╮ ╭─────────────┬──────────────┬──────────────┬─────────────┬────────────────┬─────╮
-    XXX   &kp Q         &kp W         &kp E          &kp R           &kp T           &kp Y         &kp U          &kp I          &kp O         &kp P            XXX  
+    &kp LC(TAB)   &kp Q         &kp W         &kp E          &kp R           &kp T           &kp Y         &kp U          &kp I          &kp O         &kp P            &kp LG(E)  
 //├─────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤ ├─────────────┼──────────────┼──────────────┼─────────────┼────────────────┼─────┤
-    XXX   &kp A         &kp S         &kp D          &kp F           &kp G           &kp H         &kp J          &kp K          &kp L         &kp SEMI         XXX 
+    &kp LG(TAB)   &kp A         &kp S         &kp D          &kp F           &kp G           &kp H         &kp J          &kp K          &kp L         &kp SEMI         &kp LG(V)
 //├─────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤ ├─────────────┼──────────────┼──────────────┼─────────────┼────────────────┼─────┤
-    XXX   &kp Z         &kp X         &kp C          &kp V           &kp B           &kp N         &kp M          &kp COMMA      &kp PERIOD    &kp SLASH        XXX   
+    &kp LG(D)   &kp Z         &kp X         &kp C          &kp V           &kp B           &kp N         &kp M          &kp COMMA      &kp PERIOD    &kp SLASH        &kp LG(PERIOD) 
 //╰─────┴─────────────┴─────────────┼──────────────┼───────────────┼─────────────┤ ├─────────────┼──────────────┼──────────────┼─────────────┴────────────────┴─────╯ 
                                       &lt MUS ESC   &lt NAV SPACE   &bhm LSHFT TAB    &lt SYM RET   &lt NUM BSPC   &lt FUN DEL                                               
 //                                  ╰──────────────┴───────────────┴─────────────╯ ╰─────────────┴──────────────┴──────────────╯   
@@ -184,11 +184,11 @@ behaviors {
 //       | ESC | SPC(MNAV) | TAB(MMUS) |   |  RET(MSYM) | BCK(MNUM) | DEL(MFUN) |
                         bindings = <
 //╭─────┬─────────────┬──────────────┬──────────────┬────────────────┬──────────────╮ ╭──────────────┬───────────────┬──────────────┬─────────────┬─────────────────┬─────╮
-    XXX   &kp Q         &kp W          &kp E          &kp R            &kp T            &kp Y          &kp U           &kp I          &kp O         &kp P             XXX  
+    &kp LG(TAB)   &kp Q         &kp W          &kp E          &kp R            &kp T            &kp Y          &kp U           &kp I          &kp O         &kp P             &kp LA(LG(SPACE))   
 //├─────┼─────────────┼──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┼─────────────────┼─────┤
-    XXX   &kp A         &kp S          &kp D          &kp F            &kp G            &kp H          &kp J           &kp K          &kp L         &kp SEMI          XXX 
+    &kp LC(UP)   &kp A         &kp S          &kp D          &kp F            &kp G            &kp H          &kp J           &kp K          &kp L         &kp SEMI          &kp LG(SPACE) 
 //├─────┼─────────────┼──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┼─────────────────┼─────┤
-    XXX   &kp Z         &kp X          &kp C          &kp V            &kp B            &kp N          &kp M           &kp COMMA      &kp PERIOD    &kp SLASH         XXX   
+    &kp F11   &kp Z         &kp X          &kp C          &kp V            &kp B            &kp N          &kp M           &kp COMMA      &kp PERIOD    &kp SLASH         &kp LC(LG(SPACE))      
 //╰─────┴─────────────┴──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┴─────────────────┴─────╯ 
                                        &lt MMUS ESC   &lt MNAV SPACE  &bhm LSHFT TAB    &lt MSYM RET   &lt MNUM BSPC   &lt MFUN DEL                                               
 //                                   ╰──────────────┴────────────────┴──────────────╯ ╰──────────────┴───────────────┴──────────────╯   
@@ -203,7 +203,7 @@ behaviors {
 //                   |     | TRN |     |   | RET | BSPC| DEL |
                         bindings = <
 //╭─────┬────────────┬──────────────┬──────────────┬───────────────┬───────────────╮ ╭────────────┬──────────┬──────────┬───────────┬─────────┬─────╮
-    XXX   &kp CAPS     &kp LC(SPACE)  &kp C_VOL_DN   &kp C_VOL_UP    &kp C_MUTE        XXX          &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
+    XXX   &kp LS(CAPS)     &kp CAPS  &kp C_VOL_DN   &kp C_VOL_UP    &kp C_MUTE        XXX          &kp HOME   &kp UP     &kp PG_UP   XXX       XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┼─────────┼─────┤
     XXX   &skq LCTRL   &skq LALT      &skq LGUI      &skq LSHFT      &kp LS(LG(N4))    &kp LA(RET)  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SQT   XXX  
 //├─────┼────────────┼──────────────┼──────────────┼───────────────┼───────────────┤ ├────────────┼──────────┼──────────┼───────────┼─────────┼─────┤

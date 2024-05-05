@@ -59,7 +59,7 @@ behaviors {
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <165>;
+            tapping_term_ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -171,11 +171,11 @@ behaviors {
 //       | 한영 | SPC(MNAV) | TAB(MMUS) |   |  RET(MFUN) | BCK(MNUM) | DEL |
                         bindings = <
 //╭─────┬────────┬──────────────┬──────────────┬────────────────┬──────────────╮ ╭──────────────┬───────────────┬──────────────┬─────────────┬─────────────────┬─────╮
-    XXX   AS(Q)    AS(W)  AS(E)  AS(R)  AS(T)  AS(Y)  AS(U) AS(I) AS(O) AS(P)      &kp LA(LG(SPACE))   
+    XXX   AS(Q)    AS(W)  AS(E)  AS(R)  AS(T)  AS(Y)  AS(U)  AS(I)  AS(O)  AS(P)      XXX   
 //├─────┼────────┼──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┼─────────────────┼─────┤
-    XXX   AS(A)    AS(S)  AS(D)  AS(F)  AS(G)  AS(H)  AS(J) AS(K) AS(L) AS(SEMI)    &kp LG(SPACE) 
+    XXX   AS(A)    AS(S)  AS(D)  AS(F)  AS(G)  AS(H)  AS(J)  AS(K)  AS(L)  AS(SEMI)    XXX
 //├─────┼────────┼──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┼─────────────────┼─────┤
-    XXX   AS(Z)    AS(X)  AS(C)  AS(V)  AS(B)  AS(N)  AS(M) AS(COMMA) AS(PERIOD) AS(SLASH)      &kp LC(LG(SPACE))      
+    XXX   AS(Z)    AS(X)  AS(C)  AS(V)  AS(B)  AS(N)  AS(M)  AS(COMMA)  AS(PERIOD)  AS(SLASH)      XXX     
 //╰─────┴────────┴──────────────┼──────────────┼────────────────┼──────────────┤ ├──────────────┼───────────────┼──────────────┼─────────────┴─────────────────┴─────╯ 
                                   &kp CAPS       &lt MNAV SPACE   &lt MMUS TAB    &lt MFUN RET   &lt MNUM BSPC   &kp DEL                                               
 //                              ╰──────────────┴────────────────┴──────────────╯ ╰──────────────┴───────────────┴──────────────╯   
@@ -241,17 +241,17 @@ behaviors {
 
                 MFUN_layer {
 // -----------------------------------------------------------------------------------------
-// |     | F10 |  F7 |  F8 |  F9 | SLCK|   | CLR | BT1 | BT2 | BT# | BT4 |     |
+// |     | F10 |  F7 |  F8 |  F9 |PAUSE|   | CLR | BT1 | BT2 | BT# | BT4 |     |
 // |     | F11 |  F4 |  F5 |  F6 |PSCRN|   |     | SFT | GUI | ALT | CTL |     |
-// |     | F12 |  F1 |  F2 |  F3 |PAUSE|   |     |     |     |     |     |     |
+// |     | F12 |  F1 |  F2 |  F3 | SLCK|   |     |     |     |     |     |     |
 //                   |     |     |     |   | TRN | WIN | MAC |
                         bindings = <
 //╭─────┬─────────┬────────┬────────┬────────┬─────────────────╮ ╭─────┬───────────┬──────────┬──────────┬───────────┬─────╮
-    XXX   &kp F10   &kp F7   &kp F8   &kp F9   &kp SLCK            &bt BT_CLR  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4  XXX 
+    XXX   &kp F10   &kp F7   &kp F8   &kp F9   &kp PAUSE_BREAK     &bt BT_CLR  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4  XXX 
 //├─────┼─────────┼────────┼────────┼────────┼─────────────────┤ ├─────┼───────────┼──────────┼──────────┼───────────┼─────┤
     XXX   &kp F11   &kp F4   &kp F5   &kp F6   &kp PSCRN           XXX   &kp LSHFT   &kp LGUI   &kp LALT   &kp LCTRL   XXX 
 //├─────┼─────────┼────────┼────────┼────────┼─────────────────┤ ├─────┼───────────┼──────────┼──────────┼───────────┼─────┤
-    XXX   &kp F12   &kp F1   &kp F2   &kp F3   &kp PAUSE_BREAK     XXX   XXX         XXX        XXX        XXX         XXX  
+    XXX   &kp F12   &kp F1   &kp F2   &kp F3   &kp SLCK            XXX   XXX         XXX        XXX        XXX         XXX  
 //╰─────┴─────────┴────────┼────────┼────────┼─────────────────┤ ├─────┼───────────┼──────────┼──────────┴───────────┴─────╯ 
                              XXX      XXX      XXX                 TRN   &to 0      &to 5                                                  
 //                         ╰────────┴────────┴─────────────────╯ ╰─────┴───────────┴──────────╯ 

@@ -203,13 +203,13 @@ behaviors {
 
                MMUS_layer {
 // -----------------------------------------------------------------------------------------
-// |     |LCTAB| F11 | ALTB|SCTAB|     |   |     | MB3 | M_U | MSU |     |     |
+// |     |SCTAB| F11 | ALTB|LCTAB|     |   |     | MB3 | M_U | MSU |     |     |
 // |     | CTL | ALT | GUI | SFT |     |   | MSL | M_L | M_D | M_R | MSR |     |
 // |     |     |     |     |     |     |   |     | MB4 | MB5 | MSD |     |     |
 //                   |     |     | TRN |   | MB1 | MB2 |     |
                         bindings = <
 //╭─────┬───────────┬───────────┬──────────┬───────────┬─────╮ ╭──────────────────┬────────────────┬────────────────┬──────────────────┬───────────────────┬─────╮
-    XXX   &kp LC(TAB)  &kp F11  &kp LC(UP)   &kp LS(LC(TAB))  XXX   XXX                &mkp MB3         &mmv MOVE_UP     &msc SCROLL_UP     XXX                 XXX 
+    XXX   &kp LS(LC(TAB))  &kp F11  &kp LC(UP)  &kp LC(TAB)   XXX   XXX                &mkp MB3         &mmv MOVE_UP     &msc SCROLL_UP     XXX                 XXX 
 //├─────┼───────────┼───────────┼──────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┼───────────────────┼─────┤
     XXX   &kp LCTRL   &kp LALT    &kp LGUI   &kp LSHFT   XXX     &msc SCROLL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &msc SCROLL_RIGHT   XXX 
 //├─────┼───────────┼───────────┼──────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┼───────────────────┼─────┤

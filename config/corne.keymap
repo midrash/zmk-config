@@ -115,7 +115,7 @@ behaviors {
 //                   |     |     | TRN |   | MB1 | MB2 |     |
                         bindings = <
 //╭─────┬──────────┬──────────┬───────────┬───────────┬─────╮ ╭──────────────────┬────────────────┬────────────────┬──────────────────┬───────────────────┬─────╮
-    XXX   &kp LG(LC(TAB))   &kp LG(D)  &kp LG(TAB)  XXX       &kp LC(TAB)   XXX     &mkp MB3         &mmv MOVE_UP       &msc SCROLL_UP     XXX              XXX   
+    XXX   &kp LG(LS(TAB))   &kp LG(D)  &kp LG(TAB)  XXX       &kp LC(TAB)   XXX     &mkp MB3         &mmv MOVE_UP       &msc SCROLL_UP     XXX              XXX   
 //├─────┼──────────┼──────────┼───────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┼───────────────────┼─────┤
     XXX   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   XXX     &msc SCROLL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &msc SCROLL_RIGHT   XXX 
 //├─────┼──────────┼──────────┼───────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┼───────────────────┼─────┤

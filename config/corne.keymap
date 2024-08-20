@@ -65,16 +65,16 @@ behaviors {
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        &mmv {
+            time-to-max-speed-ms = <500>;
+        };
 
+        &mwh {
+            acceleration-exponent=<1>;
+        };
 };
 
-&mmv {
-    time-to-max-speed-ms = <500>;
-};
 
-&mwh {
-    acceleration-exponent=<1>;
-};
 
         keymap {
                 compatible = "zmk,keymap";

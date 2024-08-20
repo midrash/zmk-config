@@ -20,8 +20,8 @@
 include:
   # corne
   - board: nice_nano_v2
-    shield: corne_central_dongle dongle_display
-    artifact-name: corne_central_dongle
+    shield: corne_dongle dongle_display
+    artifact-name: corne_dongle
   - board: nice_nano_v2
     shield: corne_central_left
     artifact-name: corne_central_left

@@ -114,18 +114,14 @@ behaviors {
 // |     |     |     |     |     |     |   |     | MB4 | MB5 | MSD |     |     |
 //                   |     |     | TRN |   | MB1 | MB2 |     |
                         bindings = <
-
-                        
-XXX  &kp LG(D)  &kp LG(TAB)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(W)  XXX   &mkp MB3  &mmv MOVE_UP  &msc SCROLL_UP   XXX  XXX   XXX   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT  &kp LC(LS(T))  &msc SCROLL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCROLL_RIGHT  XXX  XXX  XXX  XXX  XXX  XXX  XXX  XXX  &mkp MB4  &mkp MB5  &msc SCROLL_DOWN  XXX  XXX  XXX  XXX  TRN  &mkp MB1  &mkp MB2  XXX 
-
 //╭─────┬──────────┬──────────┬───────────┬───────────┬─────╮ ╭──────────────────┬────────────────┬────────────────┬──────────────────┬───────────────────┬─────╮
-//    XXX   &kp LG(D)  &kp LG(TAB)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(W)   XXX    &mkp MB3         &mmv MOVE_UP       &msc SCROLL_UP     XXX              XXX   
+    XXX   &kp LG(D)  &kp LG(TAB)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(W)   XXX    &mkp MB3         &mmv MOVE_UP       &msc SCROLL_UP     XXX              XXX   
 //├─────┼──────────┼──────────┼───────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┼───────────────────┼─────┤
-//    XXX   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT  &kp LC(LS(T))   &msc SCROLL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &msc SCROLL_RIGHT   XXX 
+    XXX   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT  &kp LC(LS(T))   &msc SCROLL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &msc SCROLL_RIGHT   XXX 
 //├─────┼──────────┼──────────┼───────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┼───────────────────┼─────┤
-//    XXX   XXX        XXX        XXX         XXX         XXX     XXX                &mkp MB4         &mkp MB5         &msc SCROLL_DOWN   XXX                 XXX 
+    XXX   XXX        XXX        XXX         XXX         XXX     XXX                &mkp MB4         &mkp MB5         &msc SCROLL_DOWN   XXX                 XXX 
 //╰─────┴──────────┴──────────┼───────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┴───────────────────┴─────╯ 
-//                                XXX         XXX         TRN     &mkp MB1           &mkp MB2         XXX                                      
+                                XXX         XXX         TRN     &mkp MB1           &mkp MB2         XXX                                      
 //                            ╰───────────┴───────────┴─────╯ ╰──────────────────┴────────────────┴────────────────╯ 
                         >;
                 };

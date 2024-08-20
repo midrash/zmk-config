@@ -7,15 +7,15 @@ manifest:
     - name: englmaxi
       url-base: https://github.com/englmaxi
   projects:
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: main
-    #   import: app/west.yml
-    # modules
     - name: zmk
-      remote: urob
-      revision: main-with-native-mouse
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
+    # modules
+    # - name: zmk
+    #   remote: urob
+    #   revision: main-with-native-mouse
+    #   import: app/west.yml
     - name: zmk-dongle-display
       remote: englmaxi
       revision: win # Windows modifier symbols

@@ -11,14 +11,6 @@ config ZMK_USB
 
 endif
 
-if SHIELD_CORNE_DONGL || SHIELD_CORNE_CENTRAL_LEFT || SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-config ZMK_BLE
-    default y
-
 if ZMK_DISPLAY
 
 config I2C
@@ -26,6 +18,10 @@ config I2C
 
 config SSD1306
     default y
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
 
 endif # ZMK_DISPLAY
 
@@ -45,5 +41,13 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+if SHIELD_CORNE_DONGL || SHIELD_CORNE_CENTRAL_LEFT || SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_BLE
+    default y
 
 endif

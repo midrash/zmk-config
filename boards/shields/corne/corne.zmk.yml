@@ -8,7 +8,7 @@ exposes: [i2c_oled]
 features:
   - keys
   - display
-  - underglow
+  - pointer
 siblings:
   - corne_left
   - corne_right

@@ -18,7 +18,22 @@
 #
 ---
 include:
+  # corne
   - board: nice_nano_v2
-    shield: corne_left
+    shield: corne_central_dongle dongle_display
+    artifact-name: corne_central_dongle
+  - board: nice_nano_v2
+    shield: corne_central_left
+    artifact-name: corne_central_left
   - board: nice_nano_v2
     shield: corne_right
+    artifact-name: corne_right
+  - board: nice_nano_v2
+    shield: corne_left
+    artifact-name: corne_left
+  
+  # reset
+  # - board: seeeduino_xiao_ble
+    # shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset

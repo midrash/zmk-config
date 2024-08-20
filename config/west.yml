@@ -8,21 +8,17 @@ manifest:
       url-base: https://github.com/englmaxi
   projects:
     - name: zmk
-      remote: urob
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: feat/pointers-move-scroll
-    #   import: app/west.yml
     # modules
     # - name: zmk
     #   remote: urob
     #   revision: main-with-native-mouse
     #   import: app/west.yml
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: win # Windows modifier symbols
+    # - name: zmk-dongle-display
+    #   remote: englmaxi
+    #   revision: win # Windows modifier symbols
       # revision: mac # MacOS modifier symbols
   self:
     path: config

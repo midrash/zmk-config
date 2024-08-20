@@ -1,4 +1,4 @@
-if SHIELD_CORNE_DONGLE
+if SHIELD_CORNE_DONGLE || SHIELD_CORNE_CENTRAL_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "Corne"
@@ -6,10 +6,15 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+
+endif # SHIELD_CORNE_DONGLE || SHIELD_CORNE_CENTRAL_LEFT
+
+if SHIELD_CORNE_DONGLE
+
 config ZMK_USB 
     default y
 
-endif
+endif # SHIELD_CORNE_DONGLE
 
 if ZMK_DISPLAY
 
@@ -42,12 +47,13 @@ endchoice
 
 endif # LVGL
 
+
 if SHIELD_CORNE_DONGL || SHIELD_CORNE_CENTRAL_LEFT || SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
 
 config ZMK_SPLIT
     default y
 
-config ZMK_BLE
-    default y
+#config ZMK_BLE
+#    default y
 
-endif
+endif # SHIELD_CORNE_DONGL || SHIELD_CORNE_CENTRAL_LEFT || SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT

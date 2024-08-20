@@ -4,14 +4,14 @@ config ZMK_KEYBOARD_NAME
     default "Corne"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default n
+    default y
 
 config ZMK_USB 
     default y
 
 endif # SHIELD_CORNE_DONGLE
 
-if SHIELD_CORNE_DONGL || SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
+if SHIELD_CORNE_DONGLE || SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
 
 config ZMK_SPLIT
     default y
@@ -19,4 +19,4 @@ config ZMK_SPLIT
 config ZMK_BLE
     default y
 
-endif # SHIELD_CORNE_DONGL || SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
+endif # SHIELD_CORNE_DONGLE || SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT

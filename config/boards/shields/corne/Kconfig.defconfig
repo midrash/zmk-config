@@ -1,12 +1,28 @@
 if SHIELD_CORNE_CENTRAL_DONGLE || SHIELD_CORNE_CENTRAL_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Corne"
+    default "Corne Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
+
+
+if ZMK_DISPLAY
+
+config I2C
+    default y
+
+config SSD1306
+    default y
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+endif
+
 
 if SHIELD_CORNE_CENTRAL_DONGLE || SHIELD_CORNE_CENTRAL_LEFT || SHIELD_CORNE_PERIPHERAL_LEFT || SHIELD_CORNE_PERIPHERAL_RIGHT
 

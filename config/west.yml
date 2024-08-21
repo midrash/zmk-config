@@ -1,7 +1,7 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    # - name: zmkfirmware
+    #   url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
     - name: englmaxi
@@ -15,14 +15,9 @@ manifest:
     #   remote: zmkfirmware
     #   revision: feat/pointers-move-scroll
     #   import: app/west.yml
-    # modules
-    # - name: zmk
-    #   remote: urob
-    #   revision: main-with-native-mouse
-    #   import: app/west.yml
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: win # Windows modifier symbols
-      # revision: mac # MacOS modifier symbols
+    # - name: zmk-dongle-display
+    #   remote: englmaxi
+    #   revision: win # Windows modifier symbols
+    #   # revision: mac # MacOS modifier symbols
   self:
     path: config

@@ -13,7 +13,11 @@
 &five_column_transform {
     col-offset = <6>;
 };
-
+/ {
+    chosen {
+        zephyr,display = &oled;
+    };
+};
 &kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
 

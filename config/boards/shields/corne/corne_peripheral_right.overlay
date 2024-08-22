@@ -6,6 +6,12 @@
 
 #include "corne.dtsi"
 
+/ {
+    chosen {
+        zephyr,display = &nice_view;
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };
@@ -45,8 +51,3 @@
     };
 };
 
-/ {
-    chosen {
-        zephyr,display = &nice_view;
-    };
-};

@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
-    shield: corne_central_dongle dongle_display
-  - board: nice_nano_v2
+  # - board: seeeduino_xiao_ble
+  #   shield: corne_central_dongle dongle_display
+  - board: nice_nano_v2,
     shield: corne_central_dongle dongle_display
   - board: nice_nano_v2
     shield: corne_central_left 
@@ -28,5 +28,5 @@ include:
     # shield: corne_peripheral_right nice_view_adapter nice_view
   - board: nice_nano_v2
     shield: settings_reset
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
+  # - board: seeeduino_xiao_ble
+  #   shield: settings_reset

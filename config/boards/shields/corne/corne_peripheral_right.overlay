@@ -6,12 +6,6 @@
 
 #include "corne.dtsi"
 
-/ {
-    chosen {
-        zephyr,display = &nice_view;
-    };
-};
-
 &default_transform {
     col-offset = <6>;
 };
@@ -39,15 +33,3 @@
         , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
-
-&nice_view_spi {
-    status = "okay";
-    nice_view: ls0xx@0 {
-        compatible = "sharp,ls0xx";
-        spi-max-frequency = <1000000>;
-        reg = <0>;
-        width = <160>;
-        height = <68>;
-    };
-};
-

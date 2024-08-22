@@ -1,26 +1,26 @@
 manifest:
   remotes:
-    # - name: zmkfirmware
-    #   url-base: https://github.com/zmkfirmware
-    # - name: urob
-    #   url-base: https://github.com/urob
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
     - name: petejohanson
       url-base: https://github.com/petejohanson
-    # - name: englmaxi
-    #   url-base: https://github.com/englmaxi
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
   projects:
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: main
-    #   import: app/west.yml
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
     # - name: zmk
     #   remote: urob
     #   revision: main
     #   import: app/west.yml
-    - name: zmk
-      remote: petejohanson
-      revision: feat/pointers-move-scroll
-      import: app/west.yml
+    # - name: zmk
+    #   remote: petejohanson
+    #   revision: feat/pointers-move-scroll
+    #   import: app/west.yml
     
     # modules
     # - name: zmk-dongle-display

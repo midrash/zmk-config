@@ -6,12 +6,6 @@
 
 #include "corne.dtsi"
 
-/ {
-    chosen {
-        zephyr,display = &oled;
-    };
-};
-
 &kscan0 {
 	compatible = "zmk,kscan-gpio-matrix";
 

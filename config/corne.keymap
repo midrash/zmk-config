@@ -118,7 +118,7 @@ behaviors {
 //╭─────┬──────────┬──────────┬───────────┬───────────┬─────╮ ╭──────────────────┬────────────────┬────────────────┬──────────────────┬───────────────────┬─────╮
     XXX   &kp LG(D)  &kp LG(TAB)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(W)   XXX    &mkp MB3         &mmv MOVE_UP       &msc SCRL_UP     XXX              XXX   
 //├─────┼──────────┼──────────┼───────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┼───────────────────┼─────┤
-    XXX   &skq LGUI   &skq LALT   &skq LCTRL  &skq LSHFT LC(LS(T))   &msc SCRL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &msc SCRL_RIGHT   XXX 
+    XXX   &skq LGUI   &skq LALT   &skq LCTRL  &skq LSHFT   &kp LC(LS(T))   &msc SCRL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &msc SCRL_RIGHT   XXX 
 //├─────┼──────────┼──────────┼───────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┼───────────────────┼─────┤
     XXX   XXX        XXX        XXX         XXX         XXX     XXX                &mkp MB4         &mkp MB5         &msc SCRL_DOWN   XXX                 XXX 
 //╰─────┴──────────┴──────────┼───────────┼───────────┼─────┤ ├──────────────────┼────────────────┼────────────────┼──────────────────┴───────────────────┴─────╯ 

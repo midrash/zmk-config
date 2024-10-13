@@ -27,9 +27,9 @@
         compatible = "sinowealth,sh1106";
         reg = <0x3c>;
         label = "DISPLAY";
-        width = <128>;
+        width = <129>;
         height = <64>;
-        segment-offset = <2>;
+        segment-offset = <1>;
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
